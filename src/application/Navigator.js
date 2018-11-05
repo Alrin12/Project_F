@@ -45,4 +45,8 @@ export const RootStack = createStackNavigator(
   {
     RootDrawer: RootDrawer
   },
+  {
+    headerMode: 'none',
+
+  }
 )
