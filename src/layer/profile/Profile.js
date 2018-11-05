@@ -11,7 +11,7 @@ export default class Profile extends Component {
 
   render() {
     return(
-      <View>
+      <View style={{flex:1}}>
         <Text>Profile</Text>
       </View>
     )

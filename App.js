@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import {RootStack, RootTab} from './src/application/Navigator'
 import {SafeAreaView} from 'react-navigation'
+import {Container} from "./src/common/ui/Theme";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,8 +23,8 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <SafeAreaView>
-        <RootTab/>
+      <SafeAreaView style={styles.container}>
+        <RootStack/>
       </SafeAreaView>
     );
   }
@@ -32,19 +33,6 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    ...Container,
+  }
 });

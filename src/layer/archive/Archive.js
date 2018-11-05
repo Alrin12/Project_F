@@ -11,7 +11,7 @@ export default class Archive extends Component {
 
   render() {
     return(
-      <View>
+      <View style={{flex:1}}>
         <Text>Archive</Text>
       </View>
     )

@@ -17,9 +17,9 @@ const viewStyle = {
   height: 40,
 }
 
-export const RootTab = createBottomTabNavigator({
+export const RootTab =  createBottomTabNavigator({
   Dashboard: {
-    screen: Dashboard,
+    screen: Dashboard
   },
 
   Archive: {
@@ -27,14 +27,22 @@ export const RootTab = createBottomTabNavigator({
   },
 
   Profile: {
-    screen: Profile,
+    screen: Profile
   }
 })
 
+export const RootDrawer = createDrawerNavigator({
+    Home: {
+     screen: RootTab,
+    },
+  },
+  {
+    drawerWidth: width * 0.85,
+  }
+)
+
 export const RootStack = createStackNavigator(
   {
-    Dashboard: Dashboard,
-    Archive: Archive,
-    Profile: Profile,
+    RootDrawer: RootDrawer
   },
 )
