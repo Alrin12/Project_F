@@ -18,6 +18,9 @@ export default class Dashboard extends Component {
           contentContainerStyle={styles.scrollViewContainer}
         >
           <NewApparel/>
+          <NewApparel/>
+          <NewApparel/>
+          <NewApparel/>
         </ScrollView>
       </View>
     )
@@ -37,7 +40,6 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: width,
     flex: 1,
-    justifyContent: 'space-between',
     ...Platform.select({
       ios: {
         paddingHorizontal: 0,

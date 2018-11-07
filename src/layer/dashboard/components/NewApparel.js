@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, Dimensions} from 'react-native'
-import SwipeContainer from '../../../common/ui/SwipeContainer'
+import SwipeContainer from '../../../common/component/SwipeContainer'
 import {Container} from "../../../common/ui/Theme";
 
 export default class NewApparel extends Component {

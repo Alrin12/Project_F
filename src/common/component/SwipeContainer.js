@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, Dimensions} from 'react-native'
-import ImageCard from '../component/ImageCard'
+import SwipeImageCard from '../ui/card/SwipeImageCard'
 import Carousel from "react-native-snap-carousel";
-import {ComponentSubtitle, ComponentTitle, Container} from "./Theme"
+import {ComponentSubtitle, ComponentTitle, Container} from "../ui/Theme"
 
 export default class SwipeContainer extends Component {
   constructor(props) {
@@ -17,7 +17,12 @@ export default class SwipeContainer extends Component {
 
   _renderItem({item, index}) {
     return (
-      <ImageCard/>
+      <View style={{borderRadius:10, overflow: 'hidden'}}>
+        <SwipeImageCard
+          title={item.title}
+          subtitle={item.subtitle}
+        />
+      </View>
     )
   }
 
